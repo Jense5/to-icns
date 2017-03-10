@@ -32,7 +32,7 @@ const convertUrl = id => `${CONVERT_PRE}${id}${CONVERT_POS}${encTypes}`;
 export const convert = (input: string) =>
   new Promise((resolve, fail) => {
     const body = new FormData();
-    body.append('files[]', fs.createReadStream(filePath));
+    body.append('files[]', fs.createReadStream(input));
     fetch(UPLOAD, { method: 'post', body })
     .then(res => res.json())
     .then(jsn => fetch(convertUrl(jsn.id)))
