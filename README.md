@@ -1,8 +1,6 @@
 
 # To ICNS
 
-**In development!**
-
 **Site wrapper to convert images to icns.**  
 Supports svg, png, jpg, gif, icns, ico, and hqx.
 
