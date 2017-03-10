@@ -14,9 +14,9 @@ export const toIcnsFileName = (input: string) => {
 
 export const write = (url: string, output: string) =>
   new Promise((resolve, fail) => {
-    fetch(url)
-    .then(res => res.body.pipe(fs.createWriteStream(output)))
-    .catch(fail);
+    fetch(url).then((res) => {
+      res.body.pipe(fs.createWriteStream(output)).on('close', () => resolve());
+    }).catch(fail);
   });
 
 const UPLOAD = 'https://iconverticons.com/api/upload';
@@ -38,7 +38,7 @@ export const convertToIcns = (input: string) =>
     .then(jsn => fetch(convertUrl(jsn.id)))
     .then(res => res.json())
     .then(jsn => jsn.files.filter(file => file.format === 'icns'))
-    .then(fls => fls.map(file => write(file.download.uri, toIcnsFileName(input))))
+    .then(fls => write(fls[0].download.uri, toIcnsFileName(input)))
     .then(() => resolve(toIcnsFileName(input)))
     .catch(fail);
   });
