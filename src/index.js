@@ -29,7 +29,7 @@ const encTypes = allowedTypes.map(type => `${type}=${type === 'icns' ? '1' : '0'
 
 const convertUrl = id => `${CONVERT_PRE}${id}${CONVERT_POS}${encTypes}`;
 
-export const convert = (input: string) =>
+export const convertToIcns = (input: string) =>
   new Promise((resolve, fail) => {
     const body = new FormData();
     body.append('files[]', fs.createReadStream(input));
