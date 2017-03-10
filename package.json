@@ -5,8 +5,13 @@
   "repository": "https://github.com/Jense5/to-icns.git",
   "author": "Jensen Bernard <jensenbernard5@gmail.com> (twitter.com/Jense5_)",
   "license": "MIT",
-  "keywords": [ "to-icns" ],
-  "files": [ "dist", "README.md" ],
+  "keywords": [
+    "to-icns"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "main": "./dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
@@ -23,6 +28,8 @@
   },
   "dependencies": {
     "chalk": "^1.1.3",
+    "form-data": "^2.1.2",
+    "node-fetch": "^1.6.3",
     "winston": "^2.3.0"
   },
   "devDependencies": {
