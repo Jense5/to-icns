@@ -21,7 +21,7 @@
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "pretest": "npm run eslint && npm run flow",
     "test": "mocha test --compilers js:babel-core/register",
-    "test:watch": "npm run test -- -w",
+    "test:watch": "npm run test -- -w"
   },
   "dependencies": {
     "chalk": "^1.1.3",
