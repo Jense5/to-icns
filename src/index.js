@@ -39,5 +39,6 @@ export const convert = (input: string) =>
     .then(res => res.json())
     .then(jsn => jsn.files.filter(file => file.format === 'icns'))
     .then(fls => fls.map(file => write(file.download.uri, toIcnsFileName(input))))
+    .then(() => resolve(toIcnsFileName(input)))
     .catch(fail);
   });
