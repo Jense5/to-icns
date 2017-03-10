@@ -1,7 +1,15 @@
 import { expect } from 'chai';
-import index from '../src/index';
+import { toIcnsFileName } from '../src/index';
 
 describe('Default tests', () => {
-  it('should add', () => { expect(index.add(2, 4)).to.equal(6); });
-  it('Should subtract', () => { expect(index.subtract(2, 4)).to.equal(-2); });
+  it('should output correct path from png', () => {
+    const input = '/from/some/where/icon.png';
+    const output = '/from/some/where/icon.icns';
+    expect(toIcnsFileName(input)).to.equal(output);
+  });
+  it('should output correct path from ico', () => {
+    const input = '/from/some/where/icon.ico';
+    const output = '/from/some/where/icon.icns';
+    expect(toIcnsFileName(input)).to.equal(output);
+  });
 });
