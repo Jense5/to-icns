@@ -1,6 +1,6 @@
 {
   "name": "to-icns",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Interface to convert to .icns",
   "repository": "https://github.com/Jense5/to-icns.git",
   "author": "Jensen Bernard <jensenbernard5@gmail.com> (twitter.com/Jense5_)",
@@ -21,7 +21,8 @@
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "pretest": "npm run eslint && npm run flow",
     "test": "mocha test --compilers js:babel-core/register",
-    "test:watch": "npm run test -- -w"
+    "test:watch": "npm run test -- -w",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "chalk": "^1.1.3",
