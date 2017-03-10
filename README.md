@@ -2,7 +2,8 @@
 # To ICNS
 
 **Site wrapper to convert images to icns.**  
-Supports svg, png, jpg, gif, icns, ico, and hqx.
+Supports svg, png, jpg, gif, icns, ico, and hqx.  
+You should not use this.
 
 ```sh
 $ npm install --save to-icns

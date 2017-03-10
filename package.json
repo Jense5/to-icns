@@ -1,6 +1,6 @@
 {
   "name": "to-icns",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Interface to convert to .icns",
   "repository": "https://github.com/Jense5/to-icns.git",
   "author": "Jensen Bernard <jensenbernard5@gmail.com> (twitter.com/Jense5_)",
