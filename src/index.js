@@ -37,7 +37,10 @@ export const convertToIcns = (input: string) =>
     .then(res => res.json())
     .then(jsn => fetch(convertUrl(jsn.id)))
     .then(res => res.json())
-    .then(jsn => jsn.files.filter(file => file.format === 'icns'))
+    .then((jsn) => {
+      const fls = jsn.files || [];
+      return fls.filter(file => file.format === 'icns');
+    })
     .then((fls) => {
       if (fls.length > 0) {
         write(fls[0].download.uri, toIcnsFileName(input))
