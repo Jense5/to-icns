@@ -13,5 +13,6 @@ $ npm install --save to-icns
 import { convertToIcns } from 'to-icns';
 convertToIcns(inputPath).then((outputPath) => {
   // Output dir will be the same. Just with the .icns extension.
+  // If undefined if process failed or invalid input.
 });
 ```
